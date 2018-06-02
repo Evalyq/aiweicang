@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimum-scale=1">
+	<title>商城</title>
+	<link rel="stylesheet" type="text/css" href="./css/public.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/store.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="main">
+    	<header>
+    		<div class="head clearfix">
+    			<div class="left"><a href="javascript:void(0);"><span class="search"></span></a></div>
+    			<div class="left topCenter"><span class="logo"></span></div>
+    			<div class="right"><a href="#"><span class="shopcart"></span></a></div>
+    		</div>
+    	</header>
+    	<div class="container">
+    		<div class="banner swiper-container">
+    			<div class="swiper-wrapper">
+			        <div class="swiper-slide"><a href="#"><img src="./image/1522416176581618.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="./image/1522416176581618.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="./image/1522416176581618.jpg" alt=""></a></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+    		</div>
+    		<!-- 商品主要分类 -->
+    		<ul class="types clearfix">
+    			<li class="typelist"><a href="javascript:void(0);"><img src="./image/emerald.png" alt=""><p>翡翠玉石</p></a></li>
+    			<li class="typelist"><a href="javascript:void(0);"><img src="./image/emerald.png" alt=""><p>翡翠玉石</p></a></li>
+    			<li class="typelist"><a href="javascript:void(0);"><img src="./image/emerald.png" alt=""><p>翡翠玉石</p></a></li>
+    			<li class="typelist"><a href="javascript:void(0);"><img src="./image/emerald.png" alt=""><p>翡翠玉石</p></a></li>
+    			<li class="typelist"><a href="javascript:void(0);"><img src="./image/emerald.png" alt=""><p>翡翠玉石</p></a></li>
+    		</ul>
+    		<!-- 商品专题  SpeLists-->
+    		<div class="special">
+    			<div class="title">
+    				<i></i><span>商品专题</span><i></i>
+    			</div>
+    			<div class="speList">
+    				<div class="speItem" v-for="item in SpeLists">
+    					<a href="#"><img :src="item.img" alt=""></a>
+    					<p class="speCon">{{ item.title }}</p>
+    					<div class="user">
+    						<img :src="'https://pic.iweicang.com'+item.head_img" alt=""><span class="userName">{{ item.weibo_name}}</span>
+    						<span class="date">{{ item.create_time }}</span>
+    					</div>
+    				</div>
+    				<div class="speItem">
+    					<a href="#"><img src="./image/1512985534517996_s.jpg" alt=""></a>
+    					<p class="speCon">如何区分中国红文化中的南红、红翡翠、红珊瑚？</p>
+    					<div class="user">
+    						<img src="./image/1480319231419613.jpg" alt=""><span class="userName">爱微藏</span>
+    						<span class="date">17-12-11</span>
+    					</div>
+    				</div>
+    				<div class="speItem">
+    					<a href="#"><img src="./image/1512985534517996_s.jpg" alt=""></a>
+    					<p class="speCon">如何区分中国红文化中的南红、红翡翠、红珊瑚？</p>
+    					<div class="user">
+    						<img src="./image/1480319231419613.jpg" alt=""><span class="userName">爱微藏</span>
+    						<span class="date">17-12-11</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- 新品上市 -->
+    		<div class="newPro">
+    			<div class="titleItem"><i></i>
+                新品上市
+                </div>
+                <div class="listsBox">
+                	<div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+	                <div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+	                <div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+	                <div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+                </div>
+                
+    		</div>
+    		<!-- 精品高货 -->
+    		<div class="jingpin">
+    			<div class="titleItem"><i></i>
+                精品高货
+                </div>
+                <div class="listsBox">
+                	<div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+	                <div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+	                <div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+	                <div class="listItem">
+		                <dl>
+		                	<dt><img src="./image/1522334940331096_s.jpg" alt=""></dt>
+		                	<dd class="intro">【春茶上市】古艺白茶 正宗首采戊戌白毫银针高山头春散茶80g/盒</dd>
+		                	<dd class="price"> ￥240.00 <span>满减</span></dd>
+		                </dl>
+	                </div>
+                </div>
+    		</div>
+    		<!-- 推荐名家 -->
+    		<div class="recommend">
+    			<div class="titleItem"><i></i>
+                推荐名家
+                </div>
+                <div class="userSpe">
+                	<div class="user-title">
+                		<img src="./image/1482668937903090.jpg" alt="" class="left">
+                		<div class="userInfo left">
+                			<p class="info_name">珠宝小百科董海洋</p>
+                			<p class="info_guan">关注人数 423</p>
+                		</div>
+                		<a href="#" class="homepage right">进入主页 》</a>
+                	</div>
+                	<div class="content">
+                		<dl>
+                			<dt><img src="./image/1516098286856183_s.jpg" alt=""></dt>
+                			<dd class="con-info">【微博动漫】凤囚凰 笔记本漫画周边动漫本子文具二次元记事本加厚手帐本</dd>
+                			<dd class="con-price"> ￥39.00 </dd>
+                		</dl>
+                		<dl>
+                			<dt><img src="./image/1516098286856183_s.jpg" alt=""></dt>
+                			<dd class="con-info">【微博动漫】凤囚凰 笔记本漫画周边动漫本子文具二次元记事本加厚手帐本</dd>
+                			<dd class="con-price"> ￥39.00 </dd>
+                		</dl>
+                		<dl>
+                			<dt><img src="./image/1516098286856183_s.jpg" alt=""></dt>
+                			<dd class="con-info">【微博动漫】凤囚凰 笔记本漫画周边动漫本子文具二次元记事本加厚手帐本</dd>
+                			<dd class="con-price"> ￥39.00 </dd>
+                		</dl>
+                	</div>
+                </div>
+    		</div>
+    		<!-- 推荐商品 TjLists -->
+    		<div class="recom-things">
+    			<div class="titleItem"><i></i>
+                推荐商品
+                </div>
+                <div class="thing-list clearfix">
+                	<dl class="thing-item left" v-for="item in TjLists">
+                        <a :href="'info.html?id='+item.id" class="mask"></a>
+                		<dt class="thing-img"><img :src="'https://pic.iweicang.com'+item.img" alt=""></dt>
+                		<dd class="thing-info">{{ item.name }}</dd>
+                		<dd class="price"> ￥{{ item.sell_price }}</dd>
+                	</dl>
+                </div>
+    		</div>
+    	</div>
+    	<footer>
+    		<div class="foot-fix">
+    			<a href="#"class="index">首页</a>
+    			<a href="#" class="paimai">拍卖</a>
+    			<a href="#" class="store">商城</a>
+    			<a href="#" class="my">我</a>
+    		</div>
+    	</footer>
+    </div>
+	<script type="text/javascript" src="./js/public.js"></script>
+    <script type="text/javascript" src="./js/store.js"></script>
+</body>
+</html>

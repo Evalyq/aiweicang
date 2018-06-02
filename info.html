@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimum-scale=1">
+	<title>详情页</title>
+	<link rel="stylesheet" href="./css/public.css">
+	<link rel="stylesheet" href="./css/info.css">
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="main">
+    	<div class="shopinfo">
+    		<div class="imgwrap">
+    			<img :src="'https://pic.iweicang.com'+shopinfo.goods_img" alt="">
+    		</div>
+    		<div class="shoptitle">
+    			{{ shopinfo.goods_name }}
+    		</div>
+    		<div class="shopauthor">
+    			<div class="author-img"><img :src="'https://pic.iweicang.com'+shopinfo.head_img" alt=""></div>
+    			<div class="author-info">
+    				<p class="author-name">泰国财报代购</p>
+    				<p class="author-favor">关注人数41</p>
+    			</div>
+    			<!-- <a href="#"></a> -->
+    		</div>
+    	</div>
+    	<div class="maskwrap" v-show="maskShow">
+            <div class="maskinfo">
+                <div class="pro-info">
+                    <div class="pro-box">
+                        <p>一念 戴妃款 蛋型石榴石 吊坠 稀有石榴石钻石切割工艺高火彩</p>
+                        <div class="price">￥980.00</div>
+                    </div>
+                    <div class="favor">
+                        <span class="icon-heart2"></span>
+                    </div>
+                </div>
+                <div class="num-box">
+                    数量  
+                    <div class="m-p-box">
+                    	<span @click="reduce()">-</span><span><em class="num">{{ num }}</em></span><span @click="add()">+</span>
+                    </div>
+                </div>
+                <div class="btn-box">
+                	<a href="#" @click="clear()">取消</a>
+                	<a href="#" @click="sure()">确定</a>
+                </div>
+            </div>
+        </div>
+    	<div class="foot">
+    		<div class="foot-wrap clearfix">
+    			<div class="fl">
+    				<a href="#" class="cart"><span class="carticon"></span></a>
+    				<a href="#" class="commit"><span class="mes"></span></a>
+    			</div>
+    			<div class="fr">
+    				<a href="#" class="addCart" @click="addCart()">加入购物车</a>
+    				<a href="#" class="buyNow">立即购买</a>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="./js/public.js"></script>
+	<script type="text/javascript" src="./js/info.js"></script>
+</body>
+</html>

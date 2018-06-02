@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimum-scale=1">
+	<title>Document</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<script src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+   <div id="main">
+	   	<div>
+	   	   <label for="phone">手机号</label>
+	   	   <input type="text" id="phone" placeholder="请输入手机号" v-model="phone">
+	   </div>
+	   <div>
+	   	   <label for="password">密码</label>
+	   	   <input type="password" id="password" placeholder="请输入密码" v-model="password">
+	   </div>
+	   <a href="./sign.html">注册</a>  <a href="javascript:void(0);" @click="login()">登陆</a>
+   </div>
+	<script type="text/javascript">
+	    var htmlWidth = document.documentElement.clientWidth||document.body.clientWidth;//获取视窗宽度
+	    var htmlDom = document.getElementsByTagName('html')[0];//获取html,以便对其进行操作
+	    htmlDom.style.fontSize = htmlWidth / 15 +'px';
+	</script>
+	<script src="./js/my.js"></script>
+</body>
+</html>
